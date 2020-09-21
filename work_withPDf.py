@@ -1,13 +1,13 @@
 import PyPDF2
-import Speaker 
+import Speaker # find file in this repo
 import time
 
 filename = str(input("Enter the filename\t"))
-path = "D:\\python_envs\\All_other_codes\\" + filename+'.pdf'# can be changed  
+path = "D:\\python_envs\\All_other_codes\\" + filename+'.pdf' # can be changed  
 file = PyPDF2.PdfFileReader(path)
 try: 
 	print("The book" , filename, "was authored by" , file.getDocumentInfo()['/Creator'] , "and is " , file.getNumPages() , "pages long")# print the author name
-	firstpage , lastpage = int(input("Enter the first page\t")) , int(input('Enter the last page\t'))
+	firstpage , lastpage = int(input("Enter the first page\t")) , int(input('Enter the last page\t'))# 'creator' can be swapped with 'author'
 	text = " "
 
 	for i in range(4 , 7):#iterate over the pages
