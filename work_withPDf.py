@@ -1,16 +1,16 @@
-import PyPDF2
+import PyPDF2# to be pip installed
 import Speaker # find file in this repo
-import time
+import time# optional
 
 filename = str(input("Enter the filename\t"))
 path = "D:\\python_envs\\All_other_codes\\" + filename+'.pdf' # can be changed  
 file = PyPDF2.PdfFileReader(path)
-try: 
+try: #there may be errors wrt to pdf file reffered to 
 	print("The book" , filename, "was authored by" , file.getDocumentInfo()['/Creator'] , "and is " , file.getNumPages() , "pages long")# print the author name
 	firstpage , lastpage = int(input("Enter the first page\t")) , int(input('Enter the last page\t'))# 'creator' can be swapped with 'author'
 	text = " "
-
-	for i in range(4 , 7):#iterate over the pages
+	startpage, endpage = int(input("Enter the startpage")) , int(input("Enter the lastpage"))
+	for i in range(startpage , endpage):#iterate over the pages
 		text += file.getPage(i).extractText() # so that all the content in the pages is stored in a global variable
 
 
