@@ -1,7 +1,7 @@
 import PyPDF2# to be pip installed
 import Speaker # find file in this repo
 import time# optional
-
+#Speaker uses the default voices available in your os . The speed and voice settings can be changed from the control panel in Windows
 filename = str(input("Enter the filename\t"))
 path = "D:\\python_envs\\All_other_codes\\" + filename+'.pdf' # can be changed  
 file = PyPDF2.PdfFileReader(path)
