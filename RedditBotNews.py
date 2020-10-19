@@ -1,4 +1,4 @@
-import praw
+import praw # pip install this
 
 reddit = praw.Reddit(
     client_id='UctJAJCE-8-nvA',
